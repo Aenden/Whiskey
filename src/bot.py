@@ -2,13 +2,15 @@ import discord
 from discord.ext import commands
 import jishaku
 import config
+from cogs.utils import HelpCommand
 
 class Whiskey(commands.Bot):
-  def __init__(self, **kwags):
+  def __init__(self, **kwargs):
     super().__init__(
       command_prefix=commands.when_mentioned_or(">"),
       strip_after_prefix=True,
       case_insensitive=True,
+      help_command=HelpCommand(),
       intents=discord.Intents.all(),
       activity=discord.Activity(type=discord.ActivityType.playing, name="Are you drunk?"),
         **kwargs,
