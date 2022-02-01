@@ -1,5 +1,6 @@
 from difflib import get_close_matches
 from discord.ext import commands
+from constants import COLOR
 import discord
 
 class HelpCommand(commands.HelpCommand):
